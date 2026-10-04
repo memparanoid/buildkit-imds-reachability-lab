@@ -1,0 +1,7 @@
+FROM python:3.12-alpine
+
+COPY probe.py /probe.py
+
+ARG IMDS_BASE=http://169.254.169.254
+RUN IMDS_BASE="$IMDS_BASE" python /probe.py
+

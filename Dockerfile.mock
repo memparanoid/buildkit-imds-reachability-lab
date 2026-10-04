@@ -1,0 +1,7 @@
+FROM python:3.12-alpine
+
+WORKDIR /lab
+COPY mock_imds.py /lab/mock_imds.py
+
+ENTRYPOINT ["python", "/lab/mock_imds.py"]
+
